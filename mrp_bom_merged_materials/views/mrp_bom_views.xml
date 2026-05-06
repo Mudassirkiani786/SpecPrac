@@ -1,0 +1,15 @@
+<odoo>
+    <record id="bom_merge_button" model="ir.ui.view">
+        <field name="name">mrp.bom.form.merge</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_open_merged_materials"
+                        type="object"
+                        string="Merged Materials"
+                        class="btn-primary"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
