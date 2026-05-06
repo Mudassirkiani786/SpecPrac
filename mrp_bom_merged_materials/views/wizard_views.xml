@@ -1,0 +1,27 @@
+<odoo>
+    <record id="wizard_view" model="ir.ui.view">
+        <field name="name">merged.materials.wizard.form</field>
+        <field name="model">merged.materials.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Merged Materials">
+                <group>
+                    <field name="bom_id"/>
+                </group>
+
+                <footer>
+                    <button name="action_compute"
+                            type="object"
+                            string="Compute"
+                            class="btn-primary"/>
+                </footer>
+
+                <field name="line_ids">
+                    <tree>
+                        <field name="product_id"/>
+                        <field name="quantity"/>
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+</odoo>
